@@ -1,4 +1,4 @@
-package com.example.countryapp.ui
+package com.example.countryapp.ui.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.countryapp.data.repository.database.CountryInfo

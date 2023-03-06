@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.example.countryapp.data.repository.database.CountryInfo
 import com.example.countryapp.databinding.ViewHolderCountryListItemBinding
+import com.example.countryapp.ui.adapter.CountryListEntryViewHolder
 
 class CountryListAdapter :
     ListAdapter<CountryInfo, CountryListEntryViewHolder?>(CountryInfoDiffCallback()) {

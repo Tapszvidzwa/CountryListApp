@@ -1,4 +1,4 @@
-package com.example.countryapp.ui
+package com.example.countryapp.ui.views
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -1,4 +1,4 @@
-package com.example.countryapp.ui
+package com.example.countryapp.ui.views
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,6 +11,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.countryapp.databinding.FragmentCountryListBinding
+import com.example.countryapp.ui.CountryListAdapter
+import com.example.countryapp.ui.viewmodels.CountryListViewModel
+import com.example.countryapp.ui.viewmodels.ScreenState
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.launch
 
@@ -19,7 +22,7 @@ class CountryListFragment : Fragment() {
     private val binding
         get() = _binding
     private lateinit var adapter: CountryListAdapter
-    private val viewModel: CountryListViewModel by viewModels()
+    private val viewModel: CountryListViewModel by viewModels { CountryListViewModel.Factory }
 
     override fun onCreateView(
         inflater: LayoutInflater,

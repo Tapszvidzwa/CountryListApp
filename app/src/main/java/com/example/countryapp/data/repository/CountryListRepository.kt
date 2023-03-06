@@ -1,5 +1,6 @@
 package com.example.countryapp.data.repository
 
+import com.example.countryapp.api.CountryListApiService
 import com.example.countryapp.api.Result
 import com.example.countryapp.api.RetrofitHelper
 import com.example.countryapp.data.models.CountryListItem
@@ -7,9 +8,7 @@ import com.example.countryapp.data.repository.database.CountryDao
 import com.example.countryapp.data.repository.database.CountryInfo
 import retrofit2.HttpException
 
-class CountryListRepository(private val countryDao: CountryDao) {
-    // Since we aren't using dagger, I am creating api service here
-    private val countryListApiService = RetrofitHelper.createApiService()
+class CountryListRepository(private val countryDao: CountryDao, private val countryListApiService: CountryListApiService) {
 
     suspend fun getCountriesInfo(): Result<List<CountryInfo>> {
         try {
